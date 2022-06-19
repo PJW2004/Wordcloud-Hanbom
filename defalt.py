@@ -6,9 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import re
 import collections
-import os
-
-os.system('pip install -r requirements.txt')
 
 def data_create(width=0, hight=0, user=None):
     url = f'https://www.google.com/search?q={user}'
@@ -17,15 +14,16 @@ def data_create(width=0, hight=0, user=None):
     text = soup.text
 
     # wordcloud excute code
-    wc1 = WordCloud(max_font_size=200, font_path='./font/malgun.ttf',
+    wc = WordCloud(max_font_size=200, font_path='./font/malgun.ttf',
                     background_color='white', width=width, height=hight)
 
-    wc1.generate(text)
+    wc.generate(text)
+    return wc
 
-def image_show():
+def image_show(wc=None):
     # image create and show to window
     plt.figure(figsize=(10,8))
-    plt.imshow(wc1)
+    plt.imshow(wc)
     plt.tight_layout(pad=0)
     plt.axis('off')
     plt.show()
