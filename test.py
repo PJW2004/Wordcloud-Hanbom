@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import re
 import collections
+import os
+
+os.system('pip install -r requirements.txt')
 
 user = input()
 url = f'https://www.google.com/search?q={user}'
