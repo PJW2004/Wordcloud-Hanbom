@@ -1,4 +1,4 @@
-# Text Wordcloud
+# Wordcloud Hanbom
 
 [ 교육 용 ] 구글 자동 검색 & 키워드 추출 프로그램
 
